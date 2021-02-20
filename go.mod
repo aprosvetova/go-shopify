@@ -1,3 +1,3 @@
-module github.com/localyyz/go-shopify
+module github.com/aprosvetova/go-shopify
 
 go 1.12

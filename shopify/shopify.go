@@ -41,6 +41,8 @@ type Client struct {
 	DiscountCode     *DiscountCodeService
 	Policy           *PolicyService
 	ShippingZone     *ShippingZoneService
+	Fulfillment      *FulfillmentService
+	Order            *OrderService
 }
 
 // Options can be used to create a customized client
@@ -122,6 +124,8 @@ func NewClient(httpClient *http.Client, options ...Option) (*Client, error) {
 	c.DiscountCode = (*DiscountCodeService)(&c.common)
 	c.Policy = (*PolicyService)(&c.common)
 	c.ShippingZone = (*ShippingZoneService)(&c.common)
+	c.Fulfillment = (*FulfillmentService)(&c.common)
+	c.Order = (*OrderService)(&c.common)
 	return c, nil
 }
 
