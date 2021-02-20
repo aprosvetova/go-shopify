@@ -10,7 +10,16 @@ type OrderService service
 
 type Order struct {
 	ID             int64           `json:"id,omitempty"`
+	Name           string          `json:"name,omitempty"`
+	Email          string          `json:"email,omitempty"`
+	ContactEmail   string          `json:"contact_email,omitempty"`
+	Token          string          `json:"token,omitempty"`
+	CheckoutToken  string          `json:"checkout_token,omitempty"`
 	NoteAttributes []NoteAttribute `json:"note_attributes,omitempty"`
+	LineItems      []LineItem      `json:"line_items,omitempty"`
+	Customer struct {
+		Name string `json:"name,omitempty"`
+	} `json:"customer,omitempty"`
 }
 
 type NoteAttribute struct {

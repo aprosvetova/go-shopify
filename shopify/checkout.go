@@ -90,6 +90,7 @@ type ShippingRate struct {
 type BillingAddress struct{}
 
 type LineItem struct {
+	ProductID int64 `json:"product_id"`
 	VariantID int64 `json:"variant_id"`
 	Quantity  int64 `json:"quantity"`
 }
