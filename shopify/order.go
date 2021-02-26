@@ -18,7 +18,7 @@ type Order struct {
 	OrderNumber    int             `json:"order_number,omitempty"`
 	NoteAttributes []NoteAttribute `json:"note_attributes,omitempty"`
 	LineItems      []LineItem      `json:"line_items,omitempty"`
-	Customer       struct {
+	Customer       *struct {
 		Name string `json:"name,omitempty"`
 	} `json:"customer,omitempty"`
 }
