@@ -15,6 +15,7 @@ type Order struct {
 	ContactEmail   string          `json:"contact_email,omitempty"`
 	Token          string          `json:"token,omitempty"`
 	CheckoutToken  string          `json:"checkout_token,omitempty"`
+	CustomerLocale string          `json:"customer_locale,omitempty"`
 	OrderNumber    int             `json:"order_number,omitempty"`
 	NoteAttributes []NoteAttribute `json:"note_attributes,omitempty"`
 	LineItems      []LineItem      `json:"line_items,omitempty"`
